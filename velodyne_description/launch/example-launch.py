@@ -68,12 +68,12 @@ def generate_launch_description():
         'rviz', 'example.rviz')
 
     rsp = launch_ros.actions.Node(package='robot_state_publisher',
-                              node_executable='robot_state_publisher',
+                              executable='robot_state_publisher',
                               output='both',
                               arguments=[robot_urdf])
 
     rviz = launch_ros.actions.Node(package='rviz2',
-                              node_executable='rviz2',
+                              executable='rviz2',
                               output='both',
                               arguments=['-d', rviz_config])
 
